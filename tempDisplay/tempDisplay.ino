@@ -74,8 +74,8 @@ void loop(){
   /*AHT logic start here*/
   sensors_event_t humidity, temp;
   aht.getEvent(&humidity, &temp);   //populate RH and Temp with fresh data
-  Serial.println("Temperature: "); Serial.println(temp.temperature); Serial.println("deg C");
-  Serial.println("Humidity: "); Serial.println(humidity.relative_humidity); Serial.println("% rH");
+  Serial.println((String)"Temperature: " + temp.temperature + " deg C");
+  Serial.println((String)"Humidity: "+ humidity.relative_humidity + "% rH");
 
   delay(1000);
 
